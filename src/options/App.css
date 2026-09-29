@@ -1,0 +1,283 @@
+.options-app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+.options-header h1 {
+  margin: 0 0 4px;
+}
+
+.options-header p {
+  margin: 0 0 20px;
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.options-body {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.category-panel {
+  background: rgba(128, 128, 128, 0.06);
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.category-panel h2 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.6;
+  margin: 0 0 10px;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.category-item:hover {
+  background: rgba(128, 128, 128, 0.12);
+}
+
+.category-item.active {
+  background: rgba(37, 99, 235, 0.15);
+  font-weight: 600;
+}
+
+.category-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.category-row .category-item {
+  flex: 1;
+}
+
+.icon-btn {
+  border: none;
+  background: transparent;
+  color: inherit;
+  opacity: 0.5;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  padding: 4px 6px;
+}
+
+.icon-btn:hover {
+  opacity: 1;
+}
+
+.category-add {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.category-add input {
+  flex: 1;
+  min-width: 0;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  background: transparent;
+  color: inherit;
+}
+
+.chip-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.template-panel-toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  background: transparent;
+  color: inherit;
+  font-size: 14px;
+}
+
+.template-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.template-table th {
+  text-align: left;
+  font-size: 12px;
+  text-transform: uppercase;
+  opacity: 0.6;
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+}
+
+.template-table td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.12);
+  vertical-align: middle;
+}
+
+.category-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.row-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.empty-state {
+  padding: 40px 0;
+  text-align: center;
+  opacity: 0.6;
+}
+
+button {
+  font-family: inherit;
+}
+
+.primary-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.primary-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  color: inherit;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.danger-btn {
+  background: transparent;
+  border: 1px solid #dc2626;
+  color: #dc2626;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.form-error {
+  color: #dc2626;
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: normal;
+}
+
+.form-hint {
+  font-size: 12px;
+  opacity: 0.6;
+  font-weight: normal;
+}
+
+/* Modal (template form) */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal {
+  background: var(--modal-bg, #ffffff);
+  color: inherit;
+  border-radius: 10px;
+  padding: 20px;
+  width: 480px;
+  max-width: 90vw;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  .modal {
+    background: #1f2937;
+  }
+}
+
+.template-form h2 {
+  margin: 0 0 16px;
+}
+
+.template-form label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.template-form input,
+.template-form select,
+.template-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  background: transparent;
+  color: inherit;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: inherit;
+}
+
+.template-form textarea {
+  resize: vertical;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 6px;
+}
